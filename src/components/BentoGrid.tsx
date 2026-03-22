@@ -48,8 +48,10 @@ export default function BentoGrid() {
       <AnimatedCard><SocialsCard /></AnimatedCard>
       <AnimatedCard><FunFactCard /></AnimatedCard>
       <AnimatedCard><TerminalCard /></AnimatedCard>
-      <AnimatedCard><TechStackCard /></AnimatedCard>
-      <AnimatedCard><ProjectsCard /></AnimatedCard>
+      <div className="col-span-1 md:col-span-2 md:row-span-3 flex flex-col gap-6">
+        <AnimatedCard><TechStackCard /></AnimatedCard>
+        <AnimatedCard><ProjectsCard /></AnimatedCard>
+      </div>
       <AnimatedCard><ContactCard /></AnimatedCard>
     </motion.div>
   )

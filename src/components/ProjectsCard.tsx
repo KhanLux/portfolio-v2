@@ -5,7 +5,7 @@ export default function ProjectsCard() {
   return (
     <section
       id="work"
-      className="bento-card col-span-1 md:col-span-2 row-span-1 md:row-span-2 p-8 flex flex-col"
+      className="bento-card p-8 flex flex-col flex-1"
       aria-label="Featured projects"
     >
       <div className="gradient-border" />

@@ -74,3 +74,9 @@ test-results/
 playwright-report/
 cypress/screenshots/
 cypress/videos/
+
+# ==========================
+# Claude Code personal config
+# ==========================
+CLAUDE.local.md
+.claude/settings.local.json
