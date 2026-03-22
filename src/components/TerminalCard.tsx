@@ -1,27 +1,19 @@
-import { motion } from "framer-motion"
-
 export default function TerminalCard() {
   return (
-    <motion.section
+    <section
       className="bento-card col-span-1 md:col-span-2 row-span-1 md:row-span-2 p-0 flex flex-col"
       aria-label="Code snippet"
     >
       <div className="gradient-border" />
 
       {/* Terminal header */}
-      <div className="bg-[#2a2a2a] px-4 py-3 flex items-center justify-between border-b border-white/5 rounded-t-3xl shrink-0">
+      <div className="bg-surface-container-high px-4 py-3 flex items-center justify-between border-b border-white/5 rounded-t-3xl shrink-0">
         <div className="flex gap-1.5">
           <div className="w-3 h-3 rounded-full bg-[#ff5f56]" />
           <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
           <div className="w-3 h-3 rounded-full bg-[#27c93f]" />
         </div>
-        <span
-          className="text-slate-500"
-          style={{
-            fontFamily: "Space Mono, monospace",
-            fontSize: "10px",
-          }}
-        >
+        <span className="font-label text-[10px] text-slate-500">
           kevin@work ~ bash
         </span>
         <div className="w-16" />
@@ -29,8 +21,8 @@ export default function TerminalCard() {
 
       {/* Code body */}
       <div
-        className="p-6 leading-relaxed text-[#adc6ff]/80 custom-scroll overflow-y-auto flex-1"
-        style={{ fontFamily: "Space Mono, monospace", fontSize: "13px" }}
+        className="p-6 leading-relaxed text-primary/80 custom-scroll overflow-y-auto flex-1 font-label text-[13px]"
+        style={{ whiteSpace: "pre-wrap" }}
       >
         <span style={{ color: "#d0bcff" }}>class</span>{" "}
         <span style={{ color: "#4cd7f6" }}>Kevin</span>{" "}
@@ -75,6 +67,6 @@ export default function TerminalCard() {
         <br />
         {"}"}
       </div>
-    </motion.section>
+    </section>
   )
 }

@@ -1,25 +1,8 @@
-import { motion } from "framer-motion"
-
-const facts = [
-  {
-    icon: "sports_esports",
-    label: "PC Gamer",
-    color: "#adc6ff",
-    bg: "rgba(173,198,255,0.07)",
-    border: "rgba(173,198,255,0.2)",
-  },
-  {
-    icon: "memory",
-    label: "Linux Enthusiast",
-    color: "#4cd7f6",
-    bg: "rgba(76,215,246,0.07)",
-    border: "rgba(76,215,246,0.2)",
-  },
-]
+import { facts } from "../data/funFacts"
 
 export default function FunFactCard() {
   return (
-    <motion.section
+    <section
       className="bento-card col-span-1 p-6 flex flex-col justify-center gap-3"
       aria-label="Fun facts"
     >
@@ -31,9 +14,9 @@ export default function FunFactCard() {
           className="flex items-center gap-3 p-3 rounded-xl"
           style={{
             background: f.bg,
-            borderLeft: `3px solid ${f.color}`,
             border: `1px solid ${f.border}`,
             borderLeftWidth: "3px",
+            borderLeftColor: f.color,
           }}
         >
           <span
@@ -42,19 +25,11 @@ export default function FunFactCard() {
           >
             {f.icon}
           </span>
-          <span
-            style={{
-              fontFamily: "Space Mono, monospace",
-              fontSize: "10px",
-              textTransform: "uppercase",
-              letterSpacing: "0.1em",
-              color: "#e5e2e1",
-            }}
-          >
+          <span className="text-on-surface text-label" style={{ letterSpacing: "0.1em" }}>
             {f.label}
           </span>
         </div>
       ))}
-    </motion.section>
+    </section>
   )
 }

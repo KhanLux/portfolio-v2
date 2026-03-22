@@ -1,9 +1,8 @@
-import { motion } from "framer-motion"
 import { profile } from "../data/profile"
 
 export default function ContactCard() {
   return (
-    <motion.section
+    <section
       id="contact"
       className="bento-card col-span-1 md:col-span-2 p-8 flex flex-col justify-center card-cta-gradient relative overflow-hidden"
       aria-label="Contact"
@@ -28,10 +27,7 @@ export default function ContactCard() {
 
       {/* Content */}
       <div className="relative z-10">
-        <h3
-          className="text-2xl text-white mb-2"
-          style={{ fontFamily: "Syne, sans-serif", fontWeight: 800 }}
-        >
+        <h3 className="text-2xl text-white mb-2 font-headline font-extrabold">
           Let&apos;s work together
         </h3>
         <p className="text-white/70 text-sm mb-6">
@@ -39,8 +35,7 @@ export default function ContactCard() {
         </p>
         <a
           href={profile.email}
-          className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-white font-bold text-[#001a42] text-xs uppercase tracking-widest hover:scale-105 transition-transform duration-300 shadow-xl"
-          style={{ fontFamily: "Space Mono, monospace" }}
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-white font-bold text-[#001a42] text-xs uppercase tracking-widest hover:scale-105 transition-transform duration-300 shadow-xl font-label"
         >
           Get in touch
           <span className="material-symbols-outlined text-[16px]">
@@ -48,6 +43,6 @@ export default function ContactCard() {
           </span>
         </a>
       </div>
-    </motion.section>
+    </section>
   )
 }

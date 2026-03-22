@@ -1,9 +1,8 @@
-import { motion } from "framer-motion"
 import { profile } from "../data/profile"
 
 export default function AboutCard() {
   return (
-    <motion.section
+    <section
       id="about"
       className="bento-card bg-glow-purple col-span-1 row-span-1 md:row-span-2 p-8 flex flex-col"
       aria-label="About me"
@@ -11,20 +10,17 @@ export default function AboutCard() {
       <div className="gradient-border" />
 
       {/* Icon */}
-      <div className="mb-6 p-3 bg-[#2a2a2a] w-fit rounded-xl">
-        <span className="material-symbols-outlined text-[#adc6ff] text-2xl">
+      <div className="mb-6 p-3 bg-surface-container-high w-fit rounded-xl">
+        <span className="material-symbols-outlined text-primary text-2xl">
           terminal
         </span>
       </div>
 
-      <h2
-        className="text-xl text-white mb-4"
-        style={{ fontFamily: "Syne, sans-serif", fontWeight: 700 }}
-      >
+      <h2 className="text-xl text-white mb-4 font-headline font-bold">
         About
       </h2>
 
-      <p className="text-[#c2c6d6] text-sm leading-relaxed mb-6">
+      <p className="text-on-surface-variant text-sm leading-relaxed mb-6">
         {profile.about}
       </p>
 
@@ -39,21 +35,13 @@ export default function AboutCard() {
 
       {/* Location */}
       <div className="mt-6 pt-4 border-t border-white/5 flex items-center gap-3">
-        <span className="material-symbols-outlined text-[#ffb4ab] text-[18px]">
+        <span className="material-symbols-outlined text-error text-[18px]">
           location_on
         </span>
-        <span
-          className="text-[#c2c6d6]"
-          style={{
-            fontFamily: "Space Mono, monospace",
-            fontSize: "11px",
-            textTransform: "uppercase",
-            letterSpacing: "0.15em",
-          }}
-        >
+        <span className="text-label-sm text-on-surface-variant">
           {profile.location}
         </span>
       </div>
-    </motion.section>
+    </section>
   )
 }

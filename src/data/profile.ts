@@ -10,3 +10,5 @@ export const profile = {
   resumeUrl: "#",
   email: "mailto:kevin@example.com",
 } as const
+
+export type Profile = typeof profile

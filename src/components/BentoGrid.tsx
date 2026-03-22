@@ -37,8 +37,8 @@ function AnimatedCard({ children }: { children: React.ReactNode }) {
 export default function BentoGrid() {
   return (
     <motion.div
-      className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-[1200px] mx-auto px-4 md:px-8 pt-28 pb-16"
-      style={{ gridAutoRows: "minmax(180px, auto)" }}
+      className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-[1600px] mx-auto px-6 md:px-16 pt-28 pb-20"
+      style={{ gridAutoRows: "minmax(200px, auto)" }}
       variants={containerVariants}
       initial="hidden"
       animate="visible"

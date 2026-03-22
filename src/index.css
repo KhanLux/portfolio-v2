@@ -26,9 +26,9 @@
   --color-outline-variant: #424754;
   --color-error: #ffb4ab;
 
-  --font-headline: "Syne", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-label: "Space Mono", monospace;
+  --font-headline: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  --font-label: "SF Mono", ui-monospace, "Cascadia Mono", monospace;
 }
 
 *,
@@ -44,7 +44,7 @@ html {
 body {
   background-color: #0a0a0a;
   color: #e5e2e1;
-  font-family: "Inter", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -158,6 +158,58 @@ body {
 .custom-scroll::-webkit-scrollbar-thumb {
   background: #353534;
   border-radius: 10px;
+}
+
+/* ─── Below-fold performance ─────────────────────────────── */
+
+.bento-card-deferred {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 200px;
+}
+
+/* ─── Tech pill hover (CSS custom property --tech-color) ─── */
+
+.tech-pill:hover {
+  border-color: color-mix(in srgb, var(--tech-color) 50%, transparent) !important;
+  box-shadow: 0 0 16px color-mix(in srgb, var(--tech-color) 12%, transparent);
+}
+
+/* ─── Project title accent hover (CSS custom property --accent) ─── */
+
+.project-title:hover {
+  color: var(--accent);
+}
+
+/* ─── Typography utilities ───────────────────────────────── */
+
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.font-label {
+  font-family: var(--font-label);
+}
+
+/* Label style: mono + uppercase + tight tracking, multiple sizes */
+.text-label {
+  font-family: var(--font-label);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.text-label-sm {
+  font-family: var(--font-label);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.text-label-md {
+  font-family: var(--font-label);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 
 /* ─── Material Symbols fix ───────────────────────────────── */
